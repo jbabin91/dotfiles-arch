@@ -39,7 +39,7 @@ return require 'packer'.startup(function(use)
         config = function() require 'plugins.nvimtree' end,
     }
     -- LSP
-    use { 'kabouzeid/nvim-lspinstall' }
+    use { 'williamboman/nvim-lsp-installer' }
     use {
         'neovim/nvim-lspconfig',
         ft = filetypes,

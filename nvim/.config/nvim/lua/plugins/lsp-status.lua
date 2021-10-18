@@ -7,10 +7,7 @@ lsp_status.config {
 lsp_status.register_progress()
 
 local lspconfig = require 'lspconfig'
-local sumneko_root_path = '/usr/share/lua-language-server'
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, 'lua/?.lua')
-table.insert(runtime_path, 'lua/?/init.lua')
+local lsp_installer = require 'nvim-lsp-installer'
 
 local capabilities = lsp_status.capabilities
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -22,38 +19,15 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
     }
 }
 
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
 
-lspconfig.clangd.setup {
-    handlers = lsp_status.extensions.clangd.setup(),
-    init_options = {
-        clangdFileStatus = true
-    },
-    on_attach = lsp_status.on_attach,
-    capabilities = capabilities
-}
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
 
-lspconfig.rust_analyzer.setup {
-    on_attach = lsp_status.on_attach,
-    capabilities = capabilities
-}
-
-lspconfig.sumneko_lua.setup {
-    cmd = {'lua-language-server', '-E', sumneko_root_path .. '/main.lua'};
-    settings = {
-        Lua = {
-            runtime = {
-                version = 'LuaJIT',
-                path = runtime_path,
-            },
-            diagnostics = {
-                globals = {'vim'},
-            },
-            workspace = {
-                library = vim.api.nvim_get_runtime_file('', true),
-            },
-            telemetry = {
-                enable = false,
-            },
-        },
-    },
-}
+    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+    server:setup(opts)
+    vim.cmd [[ do User LspAttachBuffers ]]
+end)
