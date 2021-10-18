@@ -1,7 +1,7 @@
 jorgebucaran/fisher
-fisherman/fzf
 fisherman/getopts
-joseluisq/gitnow
-jorgebucaran/nvim.fish
 fisherman/spin
-fisherman/z
+jorgebucaran/autopair.fish
+dracula/fish
+jethrokuan/fzf
+joseluisq/gitnow

@@ -37,12 +37,14 @@ if [ -f $HOME/.config/fish/env/index.fish ]
   source $HOME/.config/fish/env/index.fish
 end
 
-#
-### ALIASES
-#
-# Main
+# ALIASES
 if [ -f $HOME/.config/fish/aliases/index.fish ]
   source $HOME/.config/fish/aliases/index.fish
+end
+
+# Abbreviations
+if [ -f $HOME/.config/fish/abbreviations.fish ]
+    source $XDG_CONFIG_HOME/fish/abbreviations.fish
 end
 
 #
@@ -71,11 +73,6 @@ set -g theme_nerd_fonts yes
 # if type -q colorls
 #     source (dirname (gem which colorls))/tab_complete.sh
 # end
-
-# Load settings
-if status is-interactive
-    source $XDG_CONFIG_HOME/fish/abbreviations.fish
-end
 
 # Theme config
 if [ -f $HOME/.config/fish/theme.fish ]
