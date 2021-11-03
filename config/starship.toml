@@ -23,7 +23,7 @@ disabled = false
 
 [git_state]
 format = '\[($state( $progress_current of $progress_total)\)($style)]'
-disable = false
+disabled = false
 
 [git_metrics]
 format = '\[[+$added]($added_style) [-$deleted]($deleted_style)\]'
