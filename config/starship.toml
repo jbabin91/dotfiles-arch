@@ -22,14 +22,15 @@ style = "bold dimmed white"
 disabled = false
 
 [git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style)'
+format = '\[($state( $progress_current of $progress_total)\)($style)]'
+disable = false
 
 [git_metrics]
 format = '\[[+$added]($added_style) [-$deleted]($deleted_style)\]'
-disabled = false
+disabled = true
 
 [git_status]
-conflicted = "⚔️"
+conflicted = "⚔️" 
 ahead = "🏎️💨×${count}"
 behind = "🐢×${count}"
 diverged = "🔱🏎️💨×${ahead_count} 🐢×${behind_count}"
@@ -55,7 +56,7 @@ number_threshold = 1
 symbol_threshold = 1
 
 [directory]
-truncation_length = 3
+truncation_length = 1
 truncation_symbol = "…/"
 
 [aws]
