@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    ~/.config/bat: config/bat
+    ~/.config/fish: config/fish
+    ~/.config/neofetch: config/neofetch
+    ~/.config/nvim: config/nvim
+    ~/.config/nvim-min: config/nvim-min
+    ~/.config/starship.toml: config/starship.toml
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
