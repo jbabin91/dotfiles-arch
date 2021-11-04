@@ -19,7 +19,7 @@ show_always = true
 format = '\[$symbol[$ram]($style)\]'
 threshold = -1
 style = "bold dimmed white"
-disabled = false
+disabled = true
 
 [git_state]
 format = '\[($state( $progress_current of $progress_total)\)($style)]'
