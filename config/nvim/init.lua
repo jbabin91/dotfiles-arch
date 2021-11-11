@@ -1,12 +1,5 @@
 local modules = {
-  "impatient",        -- Comment this line on first load
-  "disable_builtins", -- Disable builtin vim plugins
-  "plugins",          -- Packer configuration
-  "options",          -- Neovim configs
-  "configs",          -- Plugin Configs
-  "mappings",         -- Keymaps
-  "autocmds",
-  "themes",
+  -- "impatient",        -- Comment this line on first load
 }
 
 for _, mod in ipairs(modules) do
