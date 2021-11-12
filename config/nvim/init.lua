@@ -1,5 +1,9 @@
 local modules = {
-  -- "impatient",        -- Comment this line on first load
+  "impatient",        -- Comment this line on first load
+  "utils.disabled",
+  "plugins",
+  "core",
+  "config",
 }
 
 for _, mod in ipairs(modules) do
