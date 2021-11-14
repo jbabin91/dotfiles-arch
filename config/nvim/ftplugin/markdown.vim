@@ -1,5 +1,8 @@
 set concealcursor=c
 set synmaxcol=3000  " For long Chinese paragraphs
+setlocal textwidth=80
+
+let g:markdown_fenced_languages = ["lua", "typescript", "javascript", "typescriptreact", "javascriptreact"]
 
 " Fix minor issue with footnote, see https://github.com/vim-pandoc/vim-markdownfootnotes/issues/22
 if exists(':FootnoteNumber')

@@ -2,20 +2,16 @@
 
 ## Installing
 
-You will need `git` and GNU `stow`
-
-Clone into your `$HOME` directory or `~`
+Clone this project to your home directory
 
 ``` sh
-git clone https://github.com/jbabin91/dotfiles-arch.git ~/.dotfiles
+git clone https://github.com/jbabin91/dotfiles-arch ~/.dotfiles
 ```
 
-Run `stow` to symlink everything or just select what you want
+To install the dotfile configs run go into the dotfiles directory and run the install script
 
 ``` sh
-stow */ # Everything (the '/' ignores the README)
-```
+cd ~/.dotfiles
 
-``` sh
-stow nvim # Just the nvim config
+./install
 ```

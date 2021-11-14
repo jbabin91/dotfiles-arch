@@ -51,8 +51,8 @@ opt.tabstop = 2
 opt.softtabstop = 2
 opt.shiftwidth = 2
 
-opt.foldenable = true
-opt.foldmethod = "syntax"
+-- opt.foldenable = true
+-- opt.foldmethod = "syntax"
 
 opt.list = true
 -- opt.listchars = "tab:»,extends:›,precedes:‹,nbsp:·,trail:·"
