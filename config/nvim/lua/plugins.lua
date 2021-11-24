@@ -99,7 +99,8 @@ return require("packer").startup(
     use "onsails/lspkind-nvim"
     use "tami5/lspsaga.nvim"
     use "jose-elias-alvarez/null-ls.nvim"
-    use "williamboman/nvim-lsp-installer"
+    use { "williamboman/nvim-lsp-installer" , config = [[require("config.lsp.installer")]] }
+    use "jose-elias-alvarez/nvim-lsp-ts-utils"
     -- Snippets
     use "hrsh7th/vim-vsnip"
     use "rafamadriz/friendly-snippets"
