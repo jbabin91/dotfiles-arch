@@ -6,6 +6,7 @@
 
 - link:
     ~/.config/bat: config/bat
+    ~/.config/emacs: config/emacs
     ~/.config/fish: config/fish
     ~/.config/neofetch: config/neofetch
     ~/.config/nvim: config/nvim
