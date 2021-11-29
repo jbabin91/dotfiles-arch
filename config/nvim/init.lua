@@ -1,17 +1,18 @@
-local modules = {
-  "impatient",        -- Comment this line on first load
-  "utils.disabled",
-  "plugins",
-  "core",
-  "config",
-}
+require('impatient') -- This needs to be first
+require('config')
+require('settings')
+require('colorscheme')
+require('plugins')
+require('keymappings')
+require('autocmds')
+require('functions')
 
-for _, mod in ipairs(modules) do
-  local ok, err = pcall(require, mod)
-  if not ok then
-    vim.notify(
-      string.format("--- Module '%s' ---\n failed to load due to error: %s", mod, err)
-      , vim.log.levels.ERROR
-    )
-  end
-end
+require('lsp.config')
+require('lsp.servers.bash')
+require('lsp.servers.css')
+require('lsp.servers.graphql')
+require('lsp.servers.html')
+require('lsp.servers.json')
+require('lsp.servers.lua')
+require('lsp.servers.tsserver')
+require('lsp.servers.tailwind')
