@@ -1,17 +1,34 @@
 - defaults:
     link:
+      force: true
+      create: true
       relink: true
 
 - clean: ["~"]
 
 - link:
+    # Config directory
+    ~/.config/starship: .config/starship
+    ~/.config/tmux: .config/tmux
+    # Dotfiles
+    ~/.aliases: zsh/.aliases
+    ~/.bash_profile: bash/.bash_profile
+    ~/.bashrc: bash/.bashrc
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
+    ~/.profile: bash/.profile
+    ~/.zshenv: zsh/.zshenv
+    ~/.zprofile: zsh/.zprofile
+    ~/.zshrc: zsh/.zshrc
+    ~/.local/share/zsh/bookmarks: zsh/bookmarks
+    # MISC
     ~/.config/bat: config/bat
     ~/.config/emacs: config/emacs
     ~/.config/fish: config/fish
     ~/.config/neofetch: config/neofetch
     # ~/.config/nvim: config/nvim
     ~/.config/nvim-min: config/nvim-min
-    ~/.config/starship.toml: config/starship.toml
+    #~/.config/starship.toml: config/starship.toml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

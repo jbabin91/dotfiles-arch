@@ -1,3 +1,62 @@
+# Ignore everything except directories
+# *
+# !*/
+
+################################### WHITELIST ##################################
+
+# Config
+!.config/starship/**/*
+!.config/tmux/**/*
+
+# Dotbot
+!dotbot
+
+# Git
+!.github/**/*
+!.gitignore
+!.gitignore_global
+!.gitmodules
+
+# Vim
+!vim/**/*
+
+# Zsh
+!zsh/**/*
+
+# Misc dirs
+!bash/**/*
+!bin/**/*
+!commands/**/*
+!tasks/**/*
+!tests/**/*
+
+# Misc files
+!.color_mode
+!.tool-versions
+!install
+!install.conf.yaml
+!README.md
+!stylua.toml
+!uninstall
+
+################################### BLACKLIST ##################################
+
+# Config
+.config/nvim/plugin
+
+# Tmux
+.config/tmux/plugins
+.config/tmux/resurrect
+
+# Zsh
+.env
+bookmarks
+
+# Others
+misc
+.DS_Store
+backup
+
 undodir/
 *~
 

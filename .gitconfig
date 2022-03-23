@@ -1,0 +1,16 @@
+[user]
+  name = Jace Babin
+  email = jbabin91@gmail.com
+  username = jbabin91
+[init]
+  defaultBranch = main
+[core]
+  editor = nvim
+  excludesfile = $HOME/.gitignore_global
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  pager = delta
+  untrackedCache = true
+[color]
+  ui = auto
+[push]
+  default = current
